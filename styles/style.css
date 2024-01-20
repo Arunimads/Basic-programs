@@ -1,0 +1,9 @@
+ .stars {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .stars:hover {
+            color: orange;
+        }

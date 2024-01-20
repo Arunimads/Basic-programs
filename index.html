@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKS</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <script src="./styles/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <!--qstn 2  print hello world -->
+    <h1 style="text-align: center;">Hello world</h1>
+    <!-- qstn 3 sum  -->
+    <div class="container mt-3 p-5 shadow rounded-2 bg-success-subtle">
+        <h1>Sum</h1>
+        <div class="input-group">
+
+            <input type="number" class="form-control" id="num1" placeholder="first number">
+            <input type="number" class="form-control" id="num2" placeholder="second number">
+
+            <select name="" class="form-select form-control" id="op" onchange="Sum()">
+                <option selected disabled>Choose operator</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+
+            </select>
+
+            <input type="text" class="bg-success rounded-2 text-white" id="Display">
+        </div>
+    </div>
+    <!-- qstn 4  difference-->
+
+    <div class="container mt-3 p-5 shadow rounded bg-primary-subtle">
+
+        <h1>Difference</h1>
+        <div class="input-group">
+            <input type="number" id="n1" class="form-control" placeholder="enter number">
+            <input type="number" id="n2" class="form-control" placeholder="enter number">
+            <button class="btn btn-primary" onclick="Diff()">=</button>
+        </div>
+        <p id="result">Result</p>
+
+    </div>
+
+    <!-- qstn 5   cube-->
+    <div class="container mt-3 p-5 shadow rounded-2 bg-info-subtle">
+        <h1>Cube</h1>
+        <div class="input-group">
+            <input type="number" id="cube" class="form-control" placeholder="enter number">
+            <button class="btn btn-info" onclick="Cube()">=</button>
+        </div>
+        <p id="cubeResult">Result</p>
+    </div>
+
+    <!-- qstn 6 swap -->
+    <div class="container mt-3 p-5 shadow rounded-2 bg-warning-subtle">
+        <h1>Swap</h1>
+        <div class="input-group">
+            <input type="number" id="snum1" class="form-control" placeholder="enter number">
+            <input type="number" id="snum2" class="form-control" placeholder="enter number">
+            <button class="btn btn-warning" onclick="Swap()">Swap</button>
+
+        </div>
+        <p id="swapped">Result</p>
+
+    </div>
+    <div class="container mt-3 p-5 shadow rounded-2 bg-danger-subtle">
+        <div>
+            <h1>Please rate:</h1>
+
+            <div class="stars" onclick="rate(1)">&#9733;</div>
+            <div class="stars" onclick="rate(2)">&#9733;</div>
+            <div class="stars" onclick="rate(3)">&#9733;</div>
+            <div class="stars" onclick="rate(4)">&#9733;</div>
+            <div class="stars" onclick="rate(5)">&#9733;</div>
+        </div>
+
+        <p id="Result"></p>
+    </div>
+    <!-- qstn 8 -->
+    <div class="container mt-3 p-5 shadow bg-warning-subtle rounded">
+        <div class="row row-cols-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Largest of two numbers</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="l1" placeholder="enter a number">
+                            <input type="number" class="form-control" id="l2" placeholder="enter a number">
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="findLargestNumber()">Find Largest Number</button>
+
+                            <p id="largest"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- qstn 9 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Largest of three numbers</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="lr1" placeholder="enter a number">
+                            <input type="number" class="form-control" id="lr2" placeholder="enter a number">
+                            <input type="number" class="form-control" id="lr3" placeholder="enter a number">
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="findLargest3()">Find Largest Number</button>
+
+                            <p id="larger"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn 10 -->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check Even or Not</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="Even-inpt" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Even()">Even or not</button>
+
+                            <p id="Even-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- qstn 11 -->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check Odd or Not</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="inpt-odd" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Odd()">Check Odd or Not</button>
+
+                            <p id="odd-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn 12 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check divisible by 2 and 5</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="inpt-divisible" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Divisible()">Divisible by 2 and 5</button>
+
+                            <p id="divi-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- qstn 13 -->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check Amstrong </h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="Armstrng-divisible"
+                                placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Armstrng()">Amstrong or not</button>
+
+                            <p id="arm-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn 14 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check Palindrome</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="palindrome-input"
+                                placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="checkPalindrome()">Check Palindrome</button>
+
+                            <p id="palindrome-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- qstn 15 -->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check Prime number or not</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="prime-input" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="checkPrime()">Check Prime or not</button>
+
+                            <p id="prime-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qstn 16 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Find reverse of number</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="reverse-input" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Reverse()">Reverse the number</button>
+
+                            <p id="reverse-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- qstn 18 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Reverse the string</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="reverse-str" placeholder="enter a string">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Reversestr()">Reverse the string</button>
+
+                            <p id="reverseStr-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- qstn 21 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Find factorial</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="factorial" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Factorial()">factorial</button>
+
+                            <p id="factorial-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- q 19 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Print Fibonacci series</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="Fibonacci" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="Fibonacci()">print</button>
+
+                            <p id="Fibonacci-rslt"></p>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- q 22 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Print prime numbers</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="primes" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="printPrimes()">print</button>
+
+                            <p id="primes-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 23 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Print multiplication table</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="multiplicationtable"
+                                placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="multiplicationTable()">print</button>
+
+                            <p id="multi-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- q 24 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">sum of numbers</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="sums" placeholder="enter a number">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="calculateSum()">print</button>
+
+                            <p id="sums-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- q 24 -->
+
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Day of the week</h4>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="weeks" placeholder="enter a number  (1-7)">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="weeks()">print</button>
+
+                            <p id="weeks-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 26 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Check Palindrome</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="Palindrome-input" placeholder="enter here">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="CheckPalindrome()">Check Palindrome</button>
+
+                            <p id="Palindrome-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 27 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Array without loop</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="array-input" placeholder="enter number with space">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="array()">Accept array</button>
+
+                            <p id="array-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="./js/main.js">
+            </script>
+</body>
+
+</html>
