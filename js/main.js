@@ -497,3 +497,376 @@ function Reversestr() {
     // q 27
 
     
+    function acceptArray() {
+        // Get the input value and split it into an array
+        var inputText = document.getElementById('array-input').value;
+        var inputArray = inputText.split(' ');
+
+        // Check if the inputArray has exactly 10 elements
+        if (inputArray.length !== 10) {
+            alert('Please enter exactly 10 numbers separated by space.');
+            return;
+        }
+
+        // Convert the input values to numbers
+        var numbersArray = inputArray.map(function (value) {
+            return parseFloat(value);
+        });
+
+        // Display the entered array
+        document.getElementById('array-rslt').innerText = 'Entered array: [' + numbersArray.join(', ') + ']';
+    }
+    // q 28
+    function acceptArray2() {
+        // Get the input value and split it into an array
+        var inputText = document.getElementById('array2-input').value;
+        var numbersArray = inputText.split(' ').map(parseFloat);
+
+        // Check if the array has exactly 10 elements
+        if (numbersArray.length !== 10 || numbersArray.some(isNaN)) {
+            alert('Please enter exactly 10 valid numbers separated by space.');
+            return;
+        }
+
+        // Display the entered array
+        document.getElementById('array2-rslt').innerText = 'Entered array: [' + numbersArray.join(', ') + ']';
+    }
+    // Q 29
+    function arrayelementSum() {
+        // Get the input value and split it into an array
+        var inputText = document.getElementById('inputarray').value;
+        var inputArray = inputText.split(' ').map(parseFloat);
+
+        // Check if the array is not empty
+        if (inputArray.length === 0 || inputArray.some(isNaN)) {
+            alert('Please enter valid numbers separated by space.');
+            return;
+        }
+
+        // Calculate the sum of array elements
+        var sum = inputArray.reduce(function (acc, currentValue) {
+            return acc + currentValue;
+        }, 0);
+
+        // Display the sum of array elements
+        document.getElementById('sumArrayElements').innerText = 'Sum of array elements: ' + sum;
+    }
+    // q 30
+    function arraySum() {
+        // Get the input values
+        var num1Input = document.getElementById('num1array').value;
+        var num2Input = document.getElementById('num2array').value;
+
+        // Convert the input values to arrays
+        var num1Array = num1Input.split(' ').map(parseFloat);
+        var num2Array = num2Input.split(' ').map(parseFloat);
+
+        // Check if both arrays have the same length
+        if (num1Array.length !== num2Array.length) {
+            alert('Please enter arrays with the same length.');
+            return;
+        }
+         // Calculate the sum of the arrays
+         var sumArray = num1Array.map(function (value, index) {
+            return value + num2Array[index];
+        });
+
+        // Display the sum array
+        document.getElementById('sumArray').innerText = 'Sum of arrays: [' + sumArray.join(', ') + ']';
+    }
+
+    // q 31
+    function largeArray() {
+        // Get the input value and split it into an array of numbers
+        var inputArray = document.getElementById('largeArray').value.split(' ').map(Number);
+    
+        // Check if the input is not empty
+        if (inputArray.length > 0) {
+            // Find the largest element in the array
+            var largestElement = Math.max.apply(null, inputArray);
+    
+            // Display the result
+            document.getElementById('largeArrayRslt').innerText = 'Largest Element: ' + largestElement;
+        } else {
+            // Display an error message if the input is empty
+            document.getElementById('largeArrayRslt').innerText = 'Please enter numbers in the input field.';
+        }
+    }
+
+    // q 32
+    function sortArray() {
+        // Get the input value and split it into an array of numbers
+        var inputArray = document.getElementById('sortArray').value.split(' ').map(Number);
+    
+        // Check if the input is not empty
+        if (inputArray.length > 0) {
+            // Sort the array in ascending order
+            var sortedArray = inputArray.sort(function(a, b) {
+                return a - b;
+            });
+    
+            // Display the sorted array
+            document.getElementById('sortArrayRslt').innerText = 'Sorted Array (Ascending): ' + sortedArray.join(', ');
+        } else {
+            // Display an error message if the input is empty
+            document.getElementById('sortArrayRslt').innerText = 'Please enter numbers in the input field.';
+        }
+    }
+    // q 33
+    function searchArray() {
+        // Get the input values and split them into an array of numbers
+        var inputArray = document.getElementById('Arrayinput').value.split(' ').map(Number);
+        var searchElement = Number(document.getElementById('searchArray').value);
+    
+        // Check if the input array is not empty
+        if (inputArray.length > 0) {
+            // Use indexOf to find the index of the search element in the array
+            var index = inputArray.indexOf(searchElement);
+    
+            if (index !== -1) {
+                // Display the result if the element is found
+                document.getElementById('searchArrayRslt').innerText = 'Element found at index ' + index;
+            } else {
+                // Display a message if the element is not found
+                document.getElementById('searchArrayRslt').innerText = 'Element not found in the array.';
+            }
+        } else {
+            // Display an error message if the input array is empty
+            document.getElementById('searchArrayRslt').innerText = 'Please enter numbers in the input field.';
+        }
+    }
+    // q 34
+
+    function sameArray() {
+        // Get the input values and split them into arrays of numbers
+        var array1 = document.getElementById('samearray1').value.split(' ').map(Number);
+        var array2 = document.getElementById('samearray2').value.split(' ').map(Number);
+    
+        // Check if both input arrays have the same length
+        if (array1.length === array2.length) {
+            // Check if each element in the arrays is the same
+            var areEqual = true;
+            for (var i = 0; i < array1.length; i++) {
+                if (array1[i] !== array2[i]) {
+                    areEqual = false;
+                    break;
+                }
+            }
+    
+            // Display the result
+            if (areEqual) {
+                document.getElementById('sameArrayRslt').innerText = 'Arrays are the same.';
+            } else {
+                document.getElementById('sameArrayRslt').innerText = 'Arrays are not the same.';
+            }
+        } else {
+            // Display a message if the arrays have different lengths
+            document.getElementById('sameArrayRslt').innerText = 'Arrays have different lengths.';
+        }
+    }
+
+    // q 35
+    function removeArray() {
+        // Get the input values and split them into arrays of numbers
+        var fullArray = document.getElementById('fullarray').value.split(' ').map(Number);
+        var elementToRemove = Number(document.getElementById('removedarray').value);
+    
+        // Check if the input array is not empty
+        if (fullArray.length > 0) {
+            // Use indexOf to find the index of the element to remove
+            var indexToRemove = fullArray.indexOf(elementToRemove);
+    
+            if (indexToRemove !== -1) {
+                // Remove the element from the array using splice
+                fullArray.splice(indexToRemove, 1);
+    
+                // Display the modified array
+                document.getElementById('removeArrayRslt').innerText = 'Array after removal: ' + fullArray.join(', ');
+            } else {
+                // Display a message if the element is not found in the array
+                document.getElementById('removeArrayRslt').innerText = 'Element not found in the array.';
+            }
+        } else {
+            // Display an error message if the input array is empty
+            document.getElementById('removeArrayRslt').innerText = 'Please enter numbers in the input field.';
+        }
+    }
+    // q 36
+    function matrix() {
+        // Get the input value and split it into an array of numbers
+        var inputMatrix = document.getElementById('inputmatrix').value.split(' ').map(Number);
+    
+        // Check if the input array has exactly 4 elements
+        if (inputMatrix.length === 4) {
+            // Create a 2x2 matrix
+            var matrix = [
+                [inputMatrix[0], inputMatrix[1]],
+                [inputMatrix[2], inputMatrix[3]]
+            ];
+    
+            // Display the matrix
+            document.getElementById('matrixRslt').innerText = 'Matrix:\n' + matrix.map(row => row.join(' ')).join('\n');
+        } else {
+            // Display an error message if the input is not valid
+            document.getElementById('matrixRslt').innerText = 'Please enter exactly 4 numbers for a 2x2 matrix.';
+        }
+    }
+    // q 37
+    function transpose() {
+        // Get the input value and split it into an array of numbers
+        var inputMatrix = document.getElementById('transposematrix').value.split(' ').map(Number);
+    
+        // Check if the input array has a valid square matrix shape (n x n)
+        var matrixSize = Math.sqrt(inputMatrix.length);
+        if (matrixSize % 1 === 0) {
+            // Create the original matrix
+            var originalMatrix = [];
+            for (var i = 0; i < matrixSize; i++) {
+                originalMatrix.push(inputMatrix.slice(i * matrixSize, (i + 1) * matrixSize));
+            }
+    
+            // Calculate the transpose of the matrix
+            var transposeMatrix = originalMatrix[0].map((col, i) => originalMatrix.map(row => row[i]));
+    
+            // Display the transpose matrix
+            document.getElementById('transposematrixRslt').innerText =
+                'Original Matrix:\n' + originalMatrix.map(row => row.join(' ')).join('\n') +
+                '\n\nTranspose Matrix:\n' + transposeMatrix.map(row => row.join(' ')).join('\n');
+        } else {
+            // Display an error message if the input is not a valid square matrix
+            document.getElementById('transposematrixRslt').innerText =
+                'Please enter a valid square matrix (n x n) with correct number of elements.';
+        }
+    }
+    // Q 38
+    function sumMatrix() {
+        // Get the input values and split them into arrays of numbers
+        var matrix1 = document.getElementById('matrix1').value.split(' ').map(Number);
+        var matrix2 = document.getElementById('matrix2').value.split(' ').map(Number);
+    
+        // Check if the input arrays have the same number of elements
+        if (matrix1.length === matrix2.length) {
+            // Determine the size of the matrices (assuming both are square matrices)
+            var matrixSize = Math.sqrt(matrix1.length);
+            if (matrixSize % 1 === 0) {
+                // Create the matrices
+                var matrix1Array = [];
+                var matrix2Array = [];
+                for (var i = 0; i < matrixSize; i++) {
+                    matrix1Array.push(matrix1.slice(i * matrixSize, (i + 1) * matrixSize));
+                    matrix2Array.push(matrix2.slice(i * matrixSize, (i + 1) * matrixSize));
+                }
+    
+                // Calculate the sum of the matrices
+                var sumMatrixArray = matrix1Array.map((row, i) =>
+                    row.map((element, j) => element + matrix2Array[i][j])
+                );
+    
+                // Display the sum matrix
+                document.getElementById('sumMatrixRslt').innerText =
+                    'Matrix1:\n' + matrix1Array.map(row => row.join(' ')).join('\n') +
+                    '\n\nMatrix2:\n' + matrix2Array.map(row => row.join(' ')).join('\n') +
+                    '\n\nSum Matrix:\n' + sumMatrixArray.map(row => row.join(' ')).join('\n');
+            } else {
+                // Display an error message if the input is not square matrices
+                document.getElementById('sumMatrixRslt').innerText =
+                    'Please enter square matrices with the same number of elements.';
+            }
+        } else {
+            // Display an error message if the input arrays have different lengths
+            document.getElementById('sumMatrixRslt').innerText =
+                'Please enter matrices with the same number of elements.';
+        }
+    }
+    // q 39
+    function multiMatrix() {
+        // Get the input values and split them into arrays of numbers
+        var matrix1 = document.getElementById('multimatrix1').value.split(' ').map(Number);
+        var matrix2 = document.getElementById('multimatrix2').value.split(' ').map(Number);
+    
+        // Check if the input arrays have the correct number of elements (9 elements for 3x3 matrices)
+        if (matrix1.length === 9 && matrix2.length === 9) {
+            // Create the matrices
+            var matrix1Array = [];
+            var matrix2Array = [];
+            for (var i = 0; i < 3; i++) {
+                matrix1Array.push(matrix1.slice(i * 3, (i + 1) * 3));
+                matrix2Array.push(matrix2.slice(i * 3, (i + 1) * 3));
+            }
+    
+            // Calculate the multiplication of the matrices
+            var resultMatrixArray = [];
+            for (var i = 0; i < 3; i++) {
+                resultMatrixArray.push([]);
+                for (var j = 0; j < 3; j++) {
+                    var sum = 0;
+                    for (var k = 0; k < 3; k++) {
+                        sum += matrix1Array[i][k] * matrix2Array[k][j];
+                    }
+                    resultMatrixArray[i].push(sum);
+                }
+            }
+    
+            // Display the result matrix
+            document.getElementById('multiMatrixRslt').innerText =
+                'Matrix1:\n' + matrix1Array.map(row => row.join(' ')).join('\n') +
+                '\n\nMatrix2:\n' + matrix2Array.map(row => row.join(' ')).join('\n') +
+                '\n\nResult Matrix:\n' + resultMatrixArray.map(row => row.join(' ')).join('\n');
+        } else {
+            // Display an error message if the input arrays have incorrect number of elements
+            document.getElementById('multiMatrixRslt').innerText =
+                'Please enter two 3x3 matrices with a total of 9 elements each.';
+        }
+    }
+    // q 40
+    function sameMatrix() {
+        // Get the input values and split them into arrays of numbers
+        var matrix1 = document.getElementById('samematrix1').value.split(' ').map(Number);
+        var matrix2 = document.getElementById('samematrix2').value.split(' ').map(Number);
+    
+        // Check if the input arrays have the same number of elements
+        if (matrix1.length === matrix2.length) {
+            // Determine the size of the matrices (assuming both are square matrices)
+            var matrixSize = Math.sqrt(matrix1.length);
+            if (matrixSize % 1 === 0) {
+                // Create the matrices
+                var matrix1Array = [];
+                var matrix2Array = [];
+                for (var i = 0; i < matrixSize; i++) {
+                    matrix1Array.push(matrix1.slice(i * matrixSize, (i + 1) * matrixSize));
+                    matrix2Array.push(matrix2.slice(i * matrixSize, (i + 1) * matrixSize));
+                }
+    
+                // Check if each corresponding element in the matrices is the same
+                var areEqual = true;
+                for (var i = 0; i < matrixSize; i++) {
+                    for (var j = 0; j < matrixSize; j++) {
+                        if (matrix1Array[i][j] !== matrix2Array[i][j]) {
+                            areEqual = false;
+                            break;
+                        }
+                    }
+                    if (!areEqual) {
+                        break;
+                    }
+                }
+    
+                // Display the result
+                if (areEqual) {
+                    document.getElementById('sameMatrixRslt').innerText = 'Matrices are the same.';
+                } else {
+                    document.getElementById('sameMatrixRslt').innerText = 'Matrices are not the same.';
+                }
+            } else {
+                // Display an error message if the input is not square matrices
+                document.getElementById('sameMatrixRslt').innerText =
+                    'Please enter square matrices with the same number of elements.';
+            }
+        } else {
+            // Display an error message if the input arrays have different lengths
+            document.getElementById('sameMatrixRslt').innerText =
+                'Please enter matrices with the same number of elements.';
+        }
+    }
+    
+    

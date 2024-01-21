@@ -430,22 +430,285 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
-                        <h4 class="card-title">Array without loop</h4>
+                        <h4 class="card-title">Array with for loop</h4>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="array-input" placeholder="enter number with space">
+                            <input type="text" class="form-control" id="array-input"
+                                placeholder="enter number with space">
 
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-info" onclick="array()">Accept array</button>
+                            <button class="btn btn-info" onclick="acceptArray()">Accept array</button>
 
                             <p id="array-rslt"></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- q 28 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Array without for loop</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="array2-input"
+                                placeholder="enter number with space">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="acceptArray2()">Accept array</button>
+
+                            <p id="array2-rslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 29 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">sum of elements in arrays</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputarray"
+                                placeholder="enter number with space">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="arrayelementSum()">Sum</button>
+
+                            <p id="sumArrayElements"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- q 30 -->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Addition of two arrays</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="num1array"
+                                placeholder="enter number with space">
+                            <input type="text" class="form-control" id="num2array"
+                                placeholder="enter number with space">
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="arraySum()">Sum</button>
+
+                            <p id="sumArray"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Q 31 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Largest elements in arrays</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="largeArray"
+                                placeholder="enter number with space">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="largeArray()">largest element</button>
+
+                            <p id="largeArrayRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 32 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Sort array in ascending</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="sortArray"
+                                placeholder="enter number with space">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="sortArray()">Sort</button>
+
+                            <p id="sortArrayRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 33 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Search an element  in an array</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="Arrayinput"
+                                placeholder="enter number with space">
+                                <input type="text" class="form-control" id="searchArray"
+                                placeholder="search an element">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="searchArray()">Search</button>
+
+                            <p id="searchArrayRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- q 34 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Array same or not</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="samearray1"
+                                placeholder="enter number with space">
+                                <input type="text" class="form-control" id="samearray2"
+                                placeholder="enter number with space">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="sameArray()">Same or not</button>
+
+                            <p id="sameArrayRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- q 35 -->
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Remove an element</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="fullarray"
+                                placeholder="enter number with space">
+                                <input type="text" class="form-control" id="removedarray"
+                                placeholder="enter number to get removed">
+
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="removeArray()">remove</button>
+
+                            <p id="removeArrayRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- q 36 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Display 2x2 matrix</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputmatrix"
+                                placeholder="enter number with space">
+                                
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="matrix()">display matrix</button>
+
+                            <p id="matrixRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 37 -->
+            <div class="col">
+                <div class="card">
+                    <div class="card-body bg-danger-subtle">
+                        <h4 class="card-title">Transpose of matrix</h4>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="transposematrix"
+                                placeholder="enter number with space">
+                                
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info" onclick="transpose()">display transpose matrix</button>
+
+                            <p id="transposematrixRslt"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     <!-- q 38 -->
+
+     <div class="col">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">Sum of 2 matrix</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="matrix1"
+                        placeholder="enter number with space">
+                        <input type="text" class="form-control" id="matrix2"
+                        placeholder="enter number with space">
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" onclick="sumMatrix()">Sum of matrix</button>
+
+                    <p id="sumMatrixRslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 39 -->
+    <div class="col">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">multiplication of 3x3 matrix</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="multimatrix1"
+                        placeholder="enter number with space">
+                        <input type="text" class="form-control" id="multimatrix2"
+                        placeholder="enter number with space">
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" onclick="multiMatrix()">multiplication of matrix</button>
+
+                    <p id="multiMatrixRslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- q 40 -->
+
+    <div class="col">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">Matrix same or not</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="samematrix1"
+                        placeholder="enter number with space">
+                        <input type="text" class="form-control" id="samematrix2"
+                        placeholder="enter number with space">
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" onclick="sameMatrix()">check matrix same or not</button>
+
+                    <p id="sameMatrixRslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
+
+            
 
 
 
