@@ -11,11 +11,37 @@
 </head>
 
 <body>
+    <header class="fixed-top">
+
+        <nav class="navbar navbar-expand-sm  bg-warning-subtle" id="navbar">
+
+            <div class="container-fluid">
+                
+                <a href="#" class="navbar-brand m-2 ms-lg-5 ">BASIC PROGRAMS</a>
+                <button class="navbar-toggler " data-bs-toggle="collapse" data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class=" collapse navbar-collapse justify-content-end me-lg-5 " id="navmenu">
+                    <ul class="navbar-nav mt-lg-0 mt-md-0 mt-sm-0 mt-3 text-center   ">
+                        <li class="nav-item  "><a href="#variables" class=" nav-link  ">VARIABLES</a></li>
+                        <li class="nav-item"><a href="#ifelse" class="nav-link ">IF-ELSE</a></li>
+                        <li class="nav-item"><a href="#loops" class="nav-link ">LOOPS</a></li>
+                        <li class="nav-item"><a href="#arrays" class="nav-link">ARRAYS</a></li>
+                        <li class="nav-item"><a href="#miscellaneous" class="nav-link">MISCELLANEOUS</a></li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </nav>
+    </header>
+
 
     <!--qstn 2  print hello world -->
     <h1 style="text-align: center;">Hello world</h1>
     <!-- qstn 3 sum  -->
-    <div class="container mt-3 p-5 shadow rounded-2 bg-success-subtle">
+    <div class="container mt-3 p-5 shadow rounded-2 bg-success-subtle" id="variables">
         <h1>Sum</h1>
         <div class="input-group">
 
@@ -84,9 +110,9 @@
         <p id="Result"></p>
     </div>
     <!-- qstn 8 -->
-    <div class="container mt-3 p-5 shadow bg-warning-subtle rounded">
-        <div class="row row-cols-3 g-4">
-            <div class="col">
+    <div class="container mt-3 p-5 shadow bg-warning-subtle rounded" id="ifelse">
+        <div class="row gy-3">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Largest of two numbers</h4>
@@ -103,7 +129,7 @@
                 </div>
             </div>
             <!-- qstn 9 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Largest of three numbers</h4>
@@ -126,7 +152,7 @@
 
             <!-- qstn 10 -->
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check Even or Not</h4>
@@ -149,7 +175,7 @@
 
             <!-- qstn 11 -->
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check Odd or Not</h4>
@@ -170,7 +196,7 @@
             </div>
 
             <!-- qstn 12 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check divisible by 2 and 5</h4>
@@ -191,7 +217,7 @@
             </div>
             <!-- qstn 13 -->
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check Amstrong </h4>
@@ -213,7 +239,7 @@
             </div>
 
             <!-- qstn 14 -->
-            <div class="col">
+            <div class="col-lg-3" id="loops">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check Palindrome</h4>
@@ -235,7 +261,7 @@
             </div>
             <!-- qstn 15 -->
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check Prime number or not</h4>
@@ -256,7 +282,7 @@
             </div>
 
             <!-- qstn 16 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Find reverse of number</h4>
@@ -276,7 +302,7 @@
                 </div>
             </div>
             <!-- qstn 18 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Reverse the string</h4>
@@ -296,7 +322,7 @@
                 </div>
             </div>
             <!-- qstn 21 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Find factorial</h4>
@@ -316,7 +342,7 @@
                 </div>
             </div>
             <!-- q 19 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Print Fibonacci series</h4>
@@ -336,7 +362,7 @@
                 </div>
             </div>
             <!-- q 22 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Print prime numbers</h4>
@@ -354,7 +380,7 @@
             </div>
 
             <!-- q 23 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Print multiplication table</h4>
@@ -372,7 +398,7 @@
                 </div>
             </div>
             <!-- q 24 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">sum of numbers</h4>
@@ -391,7 +417,7 @@
             <!-- q 24 -->
 
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Day of the week</h4>
@@ -409,7 +435,7 @@
             </div>
 
             <!-- q 26 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Check Palindrome</h4>
@@ -427,7 +453,7 @@
             </div>
 
             <!-- q 27 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Array with for loop</h4>
@@ -445,7 +471,7 @@
                 </div>
             </div>
             <!-- q 28 -->
-            <div class="col">
+            <div class="col-lg-3" id="arrays">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Array without for loop</h4>
@@ -464,7 +490,7 @@
             </div>
 
             <!-- q 29 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">sum of elements in arrays</h4>
@@ -485,7 +511,7 @@
 
             <!-- q 30 -->
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Addition of two arrays</h4>
@@ -504,7 +530,7 @@
                 </div>
             </div>
             <!-- Q 31 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Largest elements in arrays</h4>
@@ -523,7 +549,7 @@
             </div>
 
             <!-- q 32 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Sort array in ascending</h4>
@@ -542,7 +568,7 @@
             </div>
 
             <!-- q 33 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Search an element  in an array</h4>
@@ -562,7 +588,7 @@
                 </div>
             </div>
             <!-- q 34 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Array same or not</h4>
@@ -584,7 +610,7 @@
 
             <!-- q 35 -->
 
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Remove an element</h4>
@@ -606,7 +632,7 @@
 
 
             <!-- q 36 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Display 2x2 matrix</h4>
@@ -624,7 +650,7 @@
                 </div>
             </div>
             <!-- 37 -->
-            <div class="col">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body bg-danger-subtle">
                         <h4 class="card-title">Transpose of matrix</h4>
@@ -643,7 +669,7 @@
             </div>
      <!-- q 38 -->
 
-     <div class="col">
+     <div class="col-lg-3">
         <div class="card">
             <div class="card-body bg-danger-subtle">
                 <h4 class="card-title">Sum of 2 matrix</h4>
@@ -663,7 +689,7 @@
         </div>
     </div>
     <!-- 39 -->
-    <div class="col">
+    <div class="col-lg-3">
         <div class="card">
             <div class="card-body bg-danger-subtle">
                 <h4 class="card-title">multiplication of 3x3 matrix</h4>
@@ -685,7 +711,7 @@
 
     <!-- q 40 -->
 
-    <div class="col">
+    <div class="col-lg-3">
         <div class="card">
             <div class="card-body bg-danger-subtle">
                 <h4 class="card-title">Matrix same or not</h4>
@@ -701,6 +727,224 @@
 
                     <p id="sameMatrixRslt"></p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!--  qstn 41  matrix element replace -->
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">Matrix Element Replace</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="matrixrplceinpt1"
+                        placeholder="Enter 4 elements with space">
+                        
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" onclick="Matrixreplace()">Replace</button>
+
+                    <p id="matrixrplcerslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <!--  qstn 42 ASCII value of given letter -->
+    <div class="col-lg-3" id="miscellaneous">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">ASCII value</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="asciiInpt" placeholder="Enter a letter">
+                        
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" onclick="Asciivalue()">Result</button>
+
+                    <p id="Asciirslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--  qstn 43 wind chill index-->
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">Wind Chill Index</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="windspeedInpt" placeholder="Wind speed(in miles/hr)">
+                        <input type="text" class="form-control" id="airtempInpt" placeholder="Air Temperature(in farenheit)">
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info"onclick="windChill()">Result</button>
+
+                    <p  id="windChillrslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--  qstn 44 Divisibility by 5 and 6-->
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">Divisibility by 5 and 6</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="inptdivisible" placeholder="Enter a Number">
+                        
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" onclick="numdivisible()">Result</button>
+
+                    <p id="inptdivisiblerslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+     <!--  qstn 47,48 class & instance-->
+     <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body bg-danger-subtle">
+                <h4 class="card-title">Class and Instance</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="usernameInput" placeholder="Enter name">
+                        
+                        
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info"onclick=" createPersonInstance()">Result</button>
+
+                    <p id="ClassInstancerslt"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+
+    <!--  qstn 45 Invoice-->
+    <div class="col-lg-12">
+        <div class="card text-center h-100 bg-danger-subtle">
+            <div class="card-header">
+                <h4>Invoice</h4>
+            </div>
+            <div class="card-body  ">
+                <h3 class="text-dark">Food Order</h3>
+
+                <select class="p-2 rounded w-50" id="items" onchange="chooseFood()">
+                    <option value="" disabled selected>Choose an item</option>
+                    <option value="Tuna Salad">Tuna Salad ($ 4.50)</option>
+                    <option value="Chiken Biriyani">Chicken Biriyani ($ 9.32)</option>
+                    <option value="Pizza">Pizza ($ 10.14)</option>
+                </select>
+                <p class="mt-2" >Price : $<span id="foodrate" class="text-dark mt-2 "></span></p>
+                <div class="mt-2 ">
+                    <label for="">Overnight Delivery : </label>
+                    <input type="radio" value="YES" id="ysbtn" name="choice" class="btn-check">
+                    <label for="ysbtn" class="btn btn-outline-dark">YES</label>
+                    <input type="radio" value="NO" id="nobtn" name="choice" class="btn-check">
+                    <label for="nobtn" class="btn btn-outline-dark">NO</label>
+                </div>
+                
+
+
+                <button class="btn btn-info mt-5 w-50" onclick="Invoice()">Invoice</button>
+            </div>
+           
+                <p class="mt-2" id="invoicerslt"></p>
+            
+        </div>
+    </div>
+    <!--  qstn 46 Test score-->
+    <div class="col-lg-12">
+        <div class="card text-center h-100 bg-danger-subtle">
+            <div class="card-header">
+                <h5>Test score</h5>
+            </div>
+            <div class="card-body">
+
+                <input type="text" class="form-control mt-4 " id="stdnameinpt" placeholder="Enter student names with comma">
+                <input type="text" class="form-control mt-4" id="stdmarkinpt" placeholder="Enter test scores with comma">
+                
+             
+
+                <button class="btn btn-info mt-5 w-50" onclick="Testscores()">Result</button>
+            </div>
+            
+                <p class="mt-2" id="Testscorerslt"></p>
+            
+        </div>
+    </div>
+    <!--  qstn 49 Right Pyramid Pattern-->
+    <div class="col-lg-12">
+        <div class="card text-center h-100 bg-danger-subtle">
+            <div class="card-header">
+                <h5>Right Pyramid Pattern</h5>
+            </div>
+            <div class="card-body ">
+
+                <input type="text" class="form-control mt-4 " id="pyramidinpt1" placeholder="Enter the limit">
+               
+                
+             
+                <button class="btn btn-info mt-5 w-25" onclick="straight1()">Straight </button>
+                <button class="btn btn-info mt-5 w-25" onclick="upside1()">Upside down</button>
+            </div>
+            <div class="d-flex justify-content-center pattern-box ">
+                <p  class="text-danger text-start mt-2" id="rightpatternrslt"></p>
+            </div>
+        </div>
+    </div>
+
+    <!--  qstn 50 left Pyramid Pattern-->
+    <div class="col-lg-12" id="card">
+        <div class="card text-center h-100 bg-danger-subtle">
+            <div class="card-header">
+                <h5>Left Pyramid Pattern</h5>
+            </div>
+            <div class="card-body ">
+
+                <input type="text" class="form-control mt-4 " id="pyramidinpt2" placeholder="Enter the limit">
+               
+                
+             
+                <button class="btn btn-info mt-5 w-25" onclick="straight2()">Straight </button>
+                <button class="btn btn-info mt-5 w-25" onclick="upside2()">Upside down</button>
+            </div>
+            <div class="d-flex justify-content-center pattern-box">
+                <p  class="text-danger text-end mt-2" id="leftpatternrslt"></p>
+            </div>
+        </div>
+    </div>
+
+    <!--  qstn 51 Star Pyramid Pattern-->
+    <div class="col-lg-12" id="card">
+        <div class="card text-center h-100 bg-danger-subtle">
+            <div class="card-header">
+                <h5> Star Pyramid Pattern</h5>
+            </div>
+            <div class="card-body ">
+
+                <input type="text" class="form-control mt-4 " id="pyramidinpt3" placeholder="Enter the limit">
+               
+                
+             
+                <button class="btn btn-info mt-5 w-25" onclick="straight3()">Straight </button>
+                <button class="btn btn-info mt-5 w-25" onclick="upside3()">Upside down</button>
+            </div>
+            <div class="d-flex justify-content-center pattern-box">
+                <p  class="text-danger mt-2" id="starpatternrslt"></p>
             </div>
         </div>
     </div>

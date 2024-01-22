@@ -868,5 +868,300 @@ function Reversestr() {
                 'Please enter matrices with the same number of elements.';
         }
     }
+   
+    //qstn 41
+
+function Matrixreplace() {
+    var matrxrplce = document.getElementById("matrixrplceinpt1");
+
+
+    var items = matrxrplce.value.split(" ");
+    var arr = new Array(2); // declaring array variable
+    let count = 0;
     
+
+    if (matrxrplce.value === "") {
+        matrixrplcerslt.innerHTML = "Please enter valid numbers.";
+        return;
+    }
+
+
+    // declare 2d array
+    for (let i = 0; i < 2; i++) {
+        arr[i] = [];
+    }
+
+    // loop to input 2d array elements
+    for (let i = 0; i < 2; i++) {
+        for (let j = 0; j < 2; j++) {
+            arr[i][j] = items[count++];
+        }
+    }
+
+    // display array
+    matrixrplcerslt.innerHTML = "<strong>Original matrix:</strong> <br>";
+    for (let i = 0; i < 2; i++) {
+        for (let j = 0; j < 2; j++) {
+            matrixrplcerslt.innerHTML += `${arr[i][j]}&nbsp;`;
+        }
+        matrixrplcerslt.innerHTML += `<br>`;
+    }
+
+    if (arr[0][0] < arr[1][1]) {
+        arr[1][1] = 1;
+    } else if (arr[0][0] > arr[1][1]) {
+        arr[0][0] = 0;
+    }
+
+    // display result
+    matrixrplcerslt.innerHTML += "<strong>Result:</strong> <br>";
+    for (let i = 0; i < 2; i++) {
+        for (let j = 0; j < 2; j++) {
+            matrixrplcerslt.innerHTML += `${arr[i][j]}&nbsp;`;
+        }
+        matrixrplcerslt.innerHTML += `<br>`;
+    }
+}
+
+//qstn 42
+function Asciivalue() {
+    const inpVal = asciiInpt.value;
+    // const asc = inpVal.charCodeAt(0); OR
+    const asc = inpVal.codePointAt(0);
+    Asciirslt.innerHTML = `ASCII value of letter ${inpVal} is ${asc}`;
+}
+
+
+//qstn 43
+
+
+function windChill() {
+    var windSpeed = windspeedInpt.value;
+    var temp = airtempInpt.value;
+    var res;
+    if (windSpeed <= 4) {
+        res = temp;
+    } else if (windSpeed <= 45) {
+        res = (1.6 * temp) - 55;
+    } else {
+        res = 91.4 + (91.4 - temp) * (0.0203 * windSpeed - 0.304 * (windSpeed) * 1 / 2 - 0.474);
+    }
+    windChillrslt.innerHTML = `Windchill Index : ${res} &deg; F`;
+
+}
+
+//qstn 44
+function numdivisible() {
+    var Num = parseInt(inptdivisible.value);
+    if (!isNaN(Num)) {
+        if (Num % 5 == 0) {
+            if (Num % 6 == 0) {
+                inptdivisiblerslt.innerHTML = Num + " is divisible by 5 and 6";
+            } else {
+                inptdivisiblerslt.innerHTML = Num + " is divisible only by 5";
+            }
+        } else {
+            if (Num % 6 == 0) {
+                inptdivisiblerslt.innerHTML = Num + " is divisible only by 6";
+            } else {
+                inptdivisiblerslt.innerHTML = Num + " is not divisible by 5 and 6";
+            }
+        }
+    } else {
+        inptdivisiblerslt.innerHTML = "Please enter a valid number.";
+    }
+}
+
+
+//qstn 45
+function chooseFood() {
+    var Food = items.value;
+    if (Food == "Tuna Salad") { foodrate.innerHTML = "4.50"; }
+    else if (Food == "Chiken Biriyani") { foodrate.innerHTML = "9.32"; }
+    else if (Food == "Pizza") { foodrate.innerHTML = "10.14"; }
+}
+function Invoice() {
+
+    var Food = items.value;
+    var total = 0;
+    let itemPrice = parseFloat(foodrate.innerHTML);
+    var Dchoice = document.querySelector("input[type='radio']:checked");
+
+    if (Dchoice.value == "YES") {
+        if (itemPrice < 10) {
+            //total= 0 + itemPrice + shipping-charge + overnight delivery charge
+            total = total + itemPrice + 2 + 5;
+            invoicerslt.innerHTML = `My Java Cafe Invoice:<br><br>
+                                ${Food} &nbsp : &nbsp $${itemPrice} <br>
+                                Shipping &nbsp : &nbsp $2.00 <br>
+                                Overnight delivery  &nbsp:&nbsp $5<br>
+                                Total &nbsp : &nbsp $${total}`;
+        } else {
+            total = total + itemPrice + 3 + 5;
+            invoicerslt.innerHTML = `My Java Cafe Invoice:<br><br>
+                                ${Food} &nbsp : &nbsp $${itemPrice} <br>
+                                Shipping &nbsp : &nbsp $3.00 <br>
+                                Overnight delivery &nbsp:&nbsp $5<br>
+                                Total &nbsp : &nbsp $${total}`;
+        }
+    } else {
+        if (itemPrice < 10) {
+            //total=  0 + itemPrice + shipping-charge 
+            total = total + itemPrice + 2;
+            invoicerslt.innerHTML = `My Java Cafe Invoice:<br><br>
+                                ${Food} &nbsp : &nbsp $${itemPrice} <br>
+                                Shipping &nbsp : &nbsp $2.00 <br>
+                                Total &nbsp : &nbsp $${total}`;
+        } else {
+            total = total + itemPrice + 3;
+            invoicerslt.innerHTML = `My Java Cafe Invoice:<br><br>
+                                ${Food} &nbsp : &nbsp $${itemPrice} <br>
+                                Shipping &nbsp : &nbsp $3.00 <br>
+                                Total &nbsp : &nbsp $${total}`;
+        }
+    }
+}
+
+
+
+//qstn 46
+
+function Testscores() {
+    var studArr = stdnameinpt.value.split(","); // Use "stdnameinpt" for student names
+    var scoreArr = stdmarkinpt.value.split(","); // Use "stdmarkinpt" for test scores
+
+    if (studArr.length !== scoreArr.length) {
+        Testscorerslt.innerHTML = `Student count doesn't match with Score count`;
+        return; // Exit the function if there's an error
+    }
+
+    var sum = scoreArr.reduce((acc, element) => acc + parseInt(element), 0);
+    var avg = sum / studArr.length;
+    var highestScore = Math.max(...scoreArr);
+
+    var belowAverageStudents = [];
+    var highestScoreInfo = '';
+
+    for (let i = 0; i < studArr.length; i++) {
+        if (parseInt(scoreArr[i]) === highestScore) {
+            highestScoreInfo = `<span class="text-success"><strong>Highest test score:<br>
+                                Name:</strong> ${studArr[i]} &nbsp;&nbsp;<strong>Marks:</strong> ${scoreArr[i]}</span> <br><br>`;
+        } else if (parseInt(scoreArr[i]) < avg) {
+            belowAverageStudents.push(`<span class="text-black">${studArr[i]} </span>`);
+        }
+    }
+
+    var belowAverageMessage = belowAverageStudents.join(', ');
+
+    Testscorerslt.innerHTML = `${highestScoreInfo}<strong>Students below average:-  ${belowAverageMessage}Needs improvement </strong><br><span class="text-primary"><strong>Average Score:</strong> ${avg.toFixed(2)}</span>`;
+}
+
+
+//qstn 47,48
+
+  // Class declaration
+  class Person {
+    constructor(name) {
+        this.name = name;
+    }
+  }
+
+// Function to handle button click and display result
+function createPersonInstance() {
+    // Get user input
+
+    let userName = document.getElementById("usernameInput").value.trim();
+
+    // Create an instance of the Person class
+
+
+    if (userName === '' ) {
+        ClassInstancerslt.innerText = "Please enter a valid name.";
+        return;
+    }
+    let personInstance = new Person(userName);
+
+    // Display result in the "ClassInstancerslt" element
+    ClassInstancerslt.innerText = `Created a person instance with Name:- ${personInstance.name}`;
+}
+
+
+//qstn 49
+
+   //straight 
+   function straight1() {
+    var n = pyramidinpt1.value;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= i; j++) {
+          rightpatternrslt.innerHTML += "* ";
+        }
+        rightpatternrslt.innerHTML += "<br>";
+    }
+}
+//Upside down
+function upside1() {
+    var n = pyramidinpt1.value;
+    for (let i = 0; i < n; i++) {
+        for (let j = 1; j <= n - i; j++) {
+            rightpatternrslt.innerHTML += "* ";
+        }
+       rightpatternrslt.innerHTML += "<br>";
+    }
+}
+
+
+
+//qstn 50
+function straight2() {
+    var n =  pyramidinpt2.value;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n - i; j++) {
+           leftpatternrslt.innerHTML += ``;
+        }
+        for (let k = 1; k <= i; k++) {
+            leftpatternrslt.innerHTML += "* ";
+        }
+        leftpatternrslt.innerHTML += "<br>";
+    }
+}
+// Upside down
+function upside2() {
+    var n =  pyramidinpt2.value;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j < i; j++) {
+            leftpatternrslt.innerHTML += ``;
+        }
+        for (let k = 0; k <= n - i; k++) {
+            leftpatternrslt.innerHTML += "* ";
+        }
+        leftpatternrslt.innerHTML += "<br>";
+    }
+}
+
+//qstn 51
+function straight3() {
+    var n = pyramidinpt3.value;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= n - i; j++) {
+            starpatternrslt.innerHTML += ``;
+        }
+        for (let k = 1; k <= ((2 * i) - 1); k++) {
+            starpatternrslt.innerHTML += "* ";
+        }
+        starpatternrslt.innerHTML += "<br>";
+    }
+}
+function upside3() {
+    var n = pyramidinpt3.value;
+    for (let i = 1; i <= n; i++) {
+        for (let j = 0; j <= i - 1; j++) {
+            starpatternrslt.innerHTML += ``;
+        }
+        for (let k = 1; k <= ((2 * n) - ((2 * i) - 1)); k++) {
+            starpatternrslt.innerHTML += "* ";
+        }
+        starpatternrslt.innerHTML += "<br>";
+    }
+}
+
     
